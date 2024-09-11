@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./asset/icons8-recycle-96.png">
+</head>
+
+<body>
+    <h1>OTP Generator</h1>
+    <div class="container">
+        <h1>Your OTP will appear here</h1>
+        <p id="otp"></p>
+        <button onclick="generateOTP()">Generate OTP</button>
+    </div>
+
+    <script>
+        function generateOTP() {
+            const OTPlength = 6;
+            var OTPStore = '';
+            for (var i = 0; i < OTPlength; i++) {
+            OTPStore = OTPStore + Math.floor(Math.random() * 10);
+            }
+            document.getElementById('otp').textContent = OTPStore;
+        }
+    </script>
+</body>
+</html>
